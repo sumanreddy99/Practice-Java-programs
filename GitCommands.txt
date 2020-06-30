@@ -41,3 +41,13 @@ Id CommandLine
   28 netstat -tulnp|grep 8888
   29 netstat -tulnp
   30 netstat -a
+
+
+
+cd GitRepository/JavaPrograms/
+  116  git add .
+  117  git commit -m "Spring - hibernate"
+  118  git version -v
+  119  git remote -v
+  120  git remote add github https://github.com/sumanreddy99/java.git
+  121  git push -f  github master
