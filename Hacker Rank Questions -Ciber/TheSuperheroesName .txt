@@ -1,0 +1,6 @@
+/*
+Enter your query below.
+Please append a semicolon ";" at the end of the query
+*/
+
+select NAME from SUPERHERO where char_length(NAME)<=6 order by ID;

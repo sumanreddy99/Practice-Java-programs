@@ -1,0 +1,32 @@
+The Math scores of students have been stored in the STUDENT table. Write a query to print the ids and the names of the students who have secured higher than the average score. The result should be sorted in ascending order of student ID.
+ 
+Input Format
+STUDENT
+Name	Type	Description
+ID	Integer	A student ID in the inclusive range [1, 1000]. This field is the primary key.
+NAME	String	A student name. This field contains between 1 and 100 characters (inclusive).
+SCORE	Float	The Math score of the student.
+ 
+Output Format
+The result should contain the ids and the names of the students who secured higher than the average score. The result should be sorted in ascending order of student ID.
+
+
+SET NULL "NULL";
+SET FEEDBACK OFF;
+SET ECHO OFF;
+SET HEADING OFF;
+SET WRAP OFF;
+SET LINESIZE 10000;
+SET TAB OFF;
+SET PAGES 0;
+SET DEFINE OFF;
+
+/*
+Enter your query below.
+Please append a semicolon ";" at the end of the query
+*/
+SELECT id, name FROM student WHERE score > (
+    SELECT AVG(score) FROM student
+);
+
+exit;

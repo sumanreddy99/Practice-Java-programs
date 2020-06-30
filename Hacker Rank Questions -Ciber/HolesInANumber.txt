@@ -1,0 +1,56 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+
+    /*
+     * Complete the 'countHoles' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts INTEGER num as parameter.
+     */
+
+    public static int countHoles(int num) {
+    // Write your code here
+    int res =0;
+        List<Integer> list0 = Arrays.asList(1,2,3,5,7);
+        List<Integer> list1 = Arrays.asList(0,4,6,9);
+        List<Integer> list2 = Arrays.asList(8);
+        char[] cAry = Integer.toString(num).toCharArray();
+        for(char c : cAry){
+            int o = Character.getNumericValue(c);
+        if(list0.contains(o)){
+            res = res + 0;
+        }else if (list1.contains(o)) {
+            res = res + 1;
+        }else if (list2.contains(o)) {
+            res = res + 2;
+        }
+        }
+        return res;
+    }
+
+}
+
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int num = Integer.parseInt(bufferedReader.readLine().trim());
+
+        int result = Result.countHoles(num);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}

@@ -1,0 +1,9 @@
+
+/*
+Enter your query here.
+Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+*/
+select a.ID, a.FIRST_NAME, a.LAST_NAME
+from 
+(select CUSTOMER.ID,CUSTOMER.FIRST_NAME,CUSTOMER.LAST_NAME, concat(FIRST_NAME,LAST_NAME) comb, len(concat(FIRST_NAME,LAST_NAME)) as comblen from CUSTOMER ) a
+where a.comblen < 12  order by  a.comblen, comb, ID;

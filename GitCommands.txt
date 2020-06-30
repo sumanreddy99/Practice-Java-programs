@@ -1,0 +1,43 @@
+How to Edit the files in drives using power shell
+
+Id CommandLine
+  -- -----------
+   1 cd 'C:\Program Files (x86)\Jenkins'
+   2 ls -ltr
+   3 ls
+   4 notepad.exe config.xml
+   5 notepad.exe config.xml
+   6 notepad.exe 'C:\Program Files (x86)\Jenkins\secrets\initialAdminPassword'
+   7 git
+
+=================================================================================
+1 gitbash
+   2 git
+   3 git --version
+   4 ls
+   5 mkdir DevWorkspace
+   6 cd .\DevWorkspace\
+   7 New-Item -Type Directory -Name test
+   8 cd test
+   9 ls -a
+  10 Get-ChildItem -Path .
+  11 Get-ChildItem -Path . -Hidden
+  12 git init
+  13 ls
+  14 Get-ChildItem -Path . -Hidden
+  15 ise
+  16 ii .
+  17 cd ..
+  18 git clone https://github.com/sumanreddy99/java.git
+  19 cd .\java\
+  20 ls
+  21 cd .\JavaPrograms\
+  22 ls
+  23 cd ..
+  24 Get-ChildItem -Hidden
+  25 cd .\.git\
+  26 ls
+  27 ii .
+  28 netstat -tulnp|grep 8888
+  29 netstat -tulnp
+  30 netstat -a
